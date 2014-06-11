@@ -1,0 +1,13 @@
+{
+    "name": "yii-ext/promo",
+    "description": "Promo module",
+    "homepage": "https://github.com/yii-ext/promo/",
+    "type": "yii-extension",
+    "authors": [
+        {
+            "name": "Dmitry Semenov",
+            "email": "disemx@gmail.com",
+            "homepage": "http://disem.org/"
+        }
+    ]
+}
