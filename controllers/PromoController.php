@@ -27,13 +27,13 @@ class PromoController extends \AdminController
     {
         return array(
             'index' => array(
-                'class' => '\promo\actions\IndexAction',
+                'class' => 'yii_ext\promo\actions\IndexAction',
             ),
             'edit' => array(
-                'class' => '\promo\actions\EditAction',
+                'class' => 'yii_ext\promo\actions\EditAction',
             ),
             'delete' => array(
-                'class' => '\promo\actions\DeleteAction',
+                'class' => 'yii_ext\promo\actions\DeleteAction',
             ),
         );
     }
