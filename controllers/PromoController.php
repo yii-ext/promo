@@ -6,12 +6,12 @@
  * Time: 18:29
  */
 
-namespace promo\controllers;
+namespace yii_ext\promo\controllers;
 
 
 /**
  * Class PromoController
- * @package promo\controllers
+ * @package yii-ext\promo\controllers
  */
 class PromoController extends \AdminController
 {

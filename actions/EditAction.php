@@ -6,14 +6,14 @@
  * Time: 18:32
  */
 
-namespace promo\actions;
+namespace yii_ext\promo\actions;
 
-use promo\models\PromoCodeModel;
+use yii_ext\promo\models\PromoCodeModel;
 use Yii;
 
 /**
  * Class EditAction
- * @package promo\actions
+ * @package yii-ext\promo\actions
  */
 class EditAction extends \CAction
 {

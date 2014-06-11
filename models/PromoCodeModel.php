@@ -1,5 +1,5 @@
 <?php
-namespace promo\models;
+namespace yii_ext\promo\models;
 
 /**
  * This is the model class for table "PromoCode".
@@ -13,11 +13,11 @@ namespace promo\models;
  * @property string  $startDate
  * @property string  $endDate
  */
-use promo\models\enums\PromoCodeType;
+use yii_ext\promo\models\enums\PromoCodeType;
 
 /**
  * Class PromoCodeModel
- * @package promo\models
+ * @package yii-ext\promo\models
  */
 class PromoCodeModel extends \CActiveRecord
 {

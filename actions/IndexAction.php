@@ -6,15 +6,15 @@
  * Time: 18:31
  */
 
-namespace promo\actions;
+namespace yii_ext\promo\actions;
 
-use promo\models\enums\PromoCodeType;
-use promo\models;
+use yii_ext\promo\models\enums\PromoCodeType;
+use yii_ext\promo\models;
 use CAction;
 
 /**
  * Class IndexAction
- * @package promo\actions
+ * @package yii-ext\promo\actions
  */
 class IndexAction extends CAction
 {

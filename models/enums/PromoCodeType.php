@@ -6,7 +6,7 @@
  * Time: 17:40
  */
 
-namespace promo\models\enums;
+namespace yii_ext\promo\models\enums;
 
 
 class PromoCodeType extends \CEnumerable
