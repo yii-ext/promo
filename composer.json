@@ -9,8 +9,5 @@
             "email": "disemx@gmail.com",
             "homepage": "http://disem.org/"
         }
-    ],
-    "require": {
-        "clevertech/yii-booster": ">=v4.0.1"
-    }
+    ]
 }
