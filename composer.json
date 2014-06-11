@@ -9,5 +9,8 @@
             "email": "disemx@gmail.com",
             "homepage": "http://disem.org/"
         }
-    ]
+    ],
+    "autoload": {
+                    "classmap": ["EClientScript.php"]
+                }
 }
