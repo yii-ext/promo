@@ -18,6 +18,19 @@ use yii_ext\promo\models\enums\PromoCodeType;
 /**
  * Class PromoCodeModel
  * @package yii-ext\promo\models
+ * @property int id
+ * @property string title
+ * @property string code
+ * @property int discountType
+ * @property double discountValue
+ * @property string startDate
+ * @property string endDate
+ * @property int applyTo1Month
+ * @property int applyTo3Month
+ * @property int applyTo6Month
+ * @method PromoCodeModel|CActiveRecord find()
+ * @method PromoCodeModel|CActiveRecord findByPK()
+ * @method PromoCodeModel|CActiveRecord findByAttributes()
  */
 class PromoCodeModel extends \CActiveRecord
 {
