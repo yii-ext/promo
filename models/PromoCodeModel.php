@@ -19,12 +19,12 @@ use yii_ext\promo\models\enums\PromoCodeType;
  * Class PromoCodeModel
  * @package yii-ext\promo\models
  * @property integer $id
- * @property string $title
- * @property string $code
+ * @property string  $title
+ * @property string  $code
  * @property integer $discountType
- * @property double $discountValue
- * @property string $startDate
- * @property string $endDate
+ * @property double  $discountValue
+ * @property string  $startDate
+ * @property string  $endDate
  * @property integer $applyTo1Month
  * @property integer $applyTo3Month
  * @property integer $applyTo6Month
@@ -54,12 +54,32 @@ class PromoCodeModel extends \CActiveRecord
             array('discountValue, applyTo1Month, applyTo3Month, applyTo6Month, ', 'numerical'),
             array('title', 'length', 'max' => 256),
             array('code', 'unique'),
+            array('applyTo1Month, applyTo3Month, applyTo6Month', 'packageValidator'),
             array('discountValue', 'compare', 'compareValue' => 0, 'operator' => '>'),
             array('discountValue', 'compare', 'compareValue' => 100, 'operator' => '<', 'on' => 'percentage', 'message' => 'Value must be less than "100" if Discount Type is "Percentage".'),
             array('endDate', 'compare', 'compareAttribute' => 'startDate', 'operator' => '>', 'message' => 'End Date must be after Start Date'),
             array('code, discountType, discountValue', 'length', 'max' => 100),
             array('startDate, endDate', 'safe'),
         );
+    }
+
+    /**
+     * @param $attribute_name
+     * @param $params
+     *
+     * @return bool
+     */
+    public function packageValidator($attribute_name, $params)
+    {
+        if (empty($this->applyTo1Month)
+            && empty($this->applyTo3Month)
+            && empty($this->applyTo6Month)
+        ) {
+            $this->addError('apply', \Yii::t('user', 'At least 1 of packages should be selected'));
+            return false;
+        }
+
+        return true;
     }
 
     /**

@@ -23,7 +23,7 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
     </div>
     <div class="form-group">
         <?php echo $form->labelEx($model, 'discountType', array('label' => 'Discount Type')); ?>
-        <?php echo $form->dropDownList($model, 'discountType', \promo\models\enums\PromoCodeType::$discountTypeArray, array('class' => 'form-control')); ?>
+        <?php echo $form->dropDownList($model, 'discountType', yii_ext\promo\models\enums\PromoCodeType::$discountTypeArray, array('class' => 'form-control')); ?>
         <?php echo $form->error($model, 'discountType'); ?>
     </div>
     <div class="form-group">
@@ -74,7 +74,7 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
         <?php echo $form->checkBoxGroup($model, 'applyTo1Month', array(), array('label' => '1 Month ')); ?>
         <?php echo $form->checkBoxGroup($model, 'applyTo3Month', array(), array('label' => '3 Month ')); ?>
         <?php echo $form->checkBoxGroup($model, 'applyTo6Month', array(), array('label' => '6 Month')); ?>
-
+        <?php echo $form->error($model, "apply"); ?>
     </div>
 <?php
 $this->widget('booster.widgets.TbButton', array(

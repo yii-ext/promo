@@ -14,6 +14,6 @@ $this->breadcrumbs = array(
 <div class="row">
     <div class="col-md-6">
         <h2>Edit Promo Code <?php echo $model->title; ?></h2>
-        <?php $this->renderPartial('promo.views._promoCodeForm', array('model' => $model, 'returnUrl' => $returnUrl)); ?>
+        <?php $this->renderPartial('yii_ext.promo.views._promoCodeForm', array('model' => $model, 'returnUrl' => $returnUrl)); ?>
     </div>
 </div>

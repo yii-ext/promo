@@ -9,6 +9,7 @@
 namespace yii_ext\promo\actions;
 
 use yii_ext\promo\models\enums\PromoCodeType;
+use yii_ext\promo\models\PromoCodeModel;
 use yii_ext\promo\models;
 use CAction;
 
@@ -21,7 +22,7 @@ class IndexAction extends CAction
     /**
      * @var string view file path
      */
-    public $view = 'promo.views.promoCode';
+    public $view = 'yii_ext.promo.views.promoCode';
 
     /**
      * Allow the user to enter a promo code to receive a specified price.
@@ -30,7 +31,7 @@ class IndexAction extends CAction
      */
     public function run()
     {
-        $model = new models\PromoCodeModel('search');
+        $model = new PromoCodeModel('search');
         if (isset($_POST[\CHtml::modelName($model)])) {
             $model->attributes = $_POST[\CHtml::modelName($model)];
             if (PromoCodeType::DISCOUNT_TYPE_PERCENTAGE == $model->discountType) {
@@ -40,7 +41,7 @@ class IndexAction extends CAction
                 $this->controller->refresh();
             }
         }
-        $dataProvider = new \CActiveDataProvider('\promo\models\PromoCodeModel', array(
+        $dataProvider = new \CActiveDataProvider('yii_ext\promo\models\PromoCodeModel', array(
             'pagination' => array(
                 'pageSize' => 20,
             ),

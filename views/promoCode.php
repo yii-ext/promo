@@ -6,7 +6,7 @@ $this->breadcrumbs = array(
 <div class="row">
     <div class="col-md-6">
         <h2>Add a New Code</h2>
-        <?php $this->renderPartial('promo.views._promoCodeForm', array('model' => $model)); ?>
+        <?php $this->renderPartial('yii_ext.promo.views._promoCodeForm', array('model' => $model)); ?>
     </div>
     <div class="col-md-6">
         <h2>Active Codes</h2>
@@ -29,7 +29,7 @@ $this->breadcrumbs = array(
                     'name' => 'discountValue',
                     'header' => 'Value',
                     'filter' => false,
-                    'value' => '(\promo\models\enums\PromoCodeType::DISCOUNT_TYPE_PERCENTAGE == $data->discountType) ? $data->discountValue . "% off" : "$" . $data->discountValue'
+                    'value' => '(yii_ext\promo\models\enums\PromoCodeType::DISCOUNT_TYPE_PERCENTAGE == $data->discountType) ? $data->discountValue . "% off" : "$" . $data->discountValue'
                 ),
                 array(
                     'name' => 'endDate',
